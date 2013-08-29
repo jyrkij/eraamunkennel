@@ -10,15 +10,15 @@
 @include establish-baseline(18px);
 
 body {
-    background: $dark;
+    background: $white;
     font-family: "source-sans-pro", sans-serif;
     font-weight: 400;
-    color: $darker-white;
+    color: $brown;
     line-height: 1.3;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "foco";
+    font-family: "museo-sans-condensed";
     font-weight: 400;
     margin: 1em 0 0;
     line-height: 1.1;
@@ -59,18 +59,127 @@ a {
     @include container($total-columns, $break);
 }
 
-header {
+section>img {
+    @include leader(1);
+    @include trailer(1);
+    width: 100%;
+    height: auto;
+    border: 1em solid $brown;
+}
+
+
+nav {
+    font-family: "museo-sans-condensed", sans-serif;
+    margin-bottom: 20px;
+    text-align: right;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        ul {
+            display: none;
+        }
+    }
+
+    li {
+        display: block;
+    }
+
+    .current, .path {
+        font-weight: 700;
+
+        &>ul {
+            li {
+                font-weight: 400;
+
+                &.current, &.path {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    a {
+        @include adjust-font-size-to(18px, 2);
+        color: $light-brown;
+        display: block;
+        text-decoration: none;
+    }
+
+    .has-children.current, .has-children.path {
+        display: block;
+
+        &>ul {
+            display: block;
+
+            &>li {
+                display: block;
+            }
+        }
+    }
+}
+
+$theme-image-height: 225px;
+.theme-image {
+    width: 100%;
+    height: $theme-image-height;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+
+    &.default {
+        background-image: url(/theme-images/header-image.jpg);
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+$footer-height: 1em * 2 + 1.3em * 1.1111111; // paragraph padding * 2 + line-height
+
+.page-wrap-for-footer {
+    min-height: 100%;
+    margin-bottom: -$footer-height;
+}
+
+.page-wrap-for-footer:after {
+    content: "";
+    display: block;
+}
+
+.wrapper.footer, .page-wrap-for-footer:after {
+    height: $footer-height;
+}
+
+
+.wrapper.header {
+    @include padding-leader(1);
+    background: $white;
+
+    @include at-breakpoint($break) {
+        border-bottom: 1px solid $light-brown;
+    }
+}
+
+.container>header {
     @include bleed($grid-padding);
     overflow: hidden;
 
     h1 {
+        float: left;
+        font-size: 1em;
+        
         a {
-            font-size: 3.25em;
+            font-size: 2em;
             line-height: 1.3;
             display: block;
-            font-family: "foco";
+            font-family: "museo-sans-condensed";
             font-weight: 300;
-            color: $red;
+            color: $light-brown;
             text-decoration: none;
             text-align: right;
             letter-spacing: -0.04em;
@@ -78,59 +187,13 @@ header {
     }
 }
 
+.wrapper.main {
+    @include padding-leader(1);
+    background: $white;
+    min-height: $theme-image-height;
+}
+
 .main {
-    nav {
-        margin-bottom: 20px;
-        text-align: right;
-
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-
-            ul {
-                display: none;
-            }
-        }
-
-        li {
-            display: block;
-        }
-
-        .current, .path {
-            font-weight: 700;
-
-            &>ul {
-                li {
-                    font-weight: 400;
-
-                    &.current, &.path {
-                        font-weight: 700;
-                    }
-                }
-            }
-        }
-
-        a {
-            @include adjust-font-size-to(18px, 2);
-            color: $white;
-            display: block;
-            text-decoration: none;
-        }
-
-        .has-children.current, .has-children.path {
-            display: block;
-
-            &>ul {
-                display: block;
-
-                &>li {
-                    display: block;
-                }
-            }
-        }
-    }
-
     aside {
         nav {
             display: none;
@@ -144,15 +207,10 @@ header {
             margin: .5em 0;
         }
     }
-
-    footer {
-        clear: both;
-        padding-top: .1px;
-    }
 }
 
 @include at-breakpoint($wide-phone-break) {
-    .main {
+    .container>header {
         &>nav {
             li {
                 display: inline-block;
@@ -162,13 +220,20 @@ header {
                     display: inline-block;
                     vertical-align: top;
                 }
+                
+                &.current, &.path {
+                    &>a {
+                        border-top: 3px solid $light-green;
+                        font-weight: 400;
+                    }
+                }
             }
         }
     }
 }
 
 @include at-breakpoint($break) {
-    .main {
+    .container>header {
         &>nav {
             li {
                 &.has-children.current, &.has-children.path {
@@ -180,9 +245,11 @@ header {
                 }
             }
         }
-
+    }
+    
+    .main {
         &>section {
-            @include span-columns(7, $break);
+            //@include span-columns(7, $break);
         }
 
         &>aside {
@@ -200,6 +267,15 @@ header {
                 }
             }
         }
+    }
+}
+
+.wrapper.footer {
+    background: $light-brown;
+
+    footer {
+        clear: both;
+        padding-top: .1px;
     }
 }
 

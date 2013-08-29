@@ -1,20 +1,12 @@
 ---
 title: Etusivu
 layout: default
+disable_title: true
+theme_image: homepage-image-v2.jpg
 ---
 
-Nimeni on Jyrki Lilja. Olen aviomies, isä ja kristitty. Koulutukseltani olen
-tietotekniikan insinööri (AMK). Minulla on ihana vaimo ja yksi lapsi. Tällä
-hetkellä olen töissä web-kehittäjänä [Focus Flow oy][ff]:llä.
+Tässä kerromme etusivun arvoista tekstiä. Sen tekstin tulisi olla riittävän pitkä kertoakseen,
+mistä on kysymys. Tekstin maksimipituus saa kuitenkin olla vain muutamia lyhyitä kappaleita.
+Näin etusivu säilyy nopeasti luettavana.
 
-Olen innokas pysymään ajan hermolla käyttämissäni teknologisissa ratkaisuissa.
-Sen vuoksi blogini tulee keskittymään teknologiaan – unohtamatta
-kuitenkaan inhimillistä puolta.
-
-Kiinnostuistko? Käy seuraavaksi lukemassa [CVni][cv] tai katsomassa kuinka voin
-[palvella sinua][palvelut]. Tervetuloa sivuilleni!
-
-[b]: /blogi
-[cv]: /cv
-[ff]: http://www.focusflow.fi/
-[palvelut]: /palvelut
+Etusivulla voi myös olla yksi kuva, joka liittyy sivuihin/teihin/koiriin. 

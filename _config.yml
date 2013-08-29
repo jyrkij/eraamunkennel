@@ -1,16 +1,16 @@
 url: /
 permalink: pretty
-name: jlilja.net
+name: Eräaamun kennel
 menu:
     -
         text: Etusivu
         url: /
     -
-        text: CV
-        url: /cv
+        text: Uutisia
+        url: /uutiset
     -
-        text: Palvelut
-        url: /palvelut
+        text: Koirat
+        url: /koirat
         children:
             -
                 text: WWW-sivut
@@ -22,14 +22,14 @@ menu:
                 text: Mobiilisovellukset
                 url: /palvelut/mobiilisovellukset
     -
-        text: Ohjelmat
-        url: /ohjelmat
+        text: Pennut
+        url: /pennut
         children:
             -
                 text: Koordinaattimuunnin
                 url: /ohjelmat/koordinaattimuunnin
     -
-        text: Ota yhteyttä
-        url: /ota-yhteytta
+        text: Historia
+        url: /historia
 
 exclude: [ 'sass', 'config.rb', 'Procfile', 'Thumbs.db' ]
