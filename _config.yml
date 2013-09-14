@@ -6,21 +6,24 @@ menu:
         text: Etusivu
         url: /
     -
-        text: Uutisia
+        text: Uutiset
         url: /uutiset
     -
         text: Koirat
         url: /koirat
         children:
             -
-                text: WWW-sivut
-                url: /palvelut/www-sivut
+                text: Nipa
+                url: /koirat/nipa
             -
-                text: IT-tuki
-                url: /palvelut/it-tuki
+                text: Nuka
+                url: /koirat/nuka
             -
-                text: Mobiilisovellukset
-                url: /palvelut/mobiilisovellukset
+                text: Kara
+                url: /koirat/kara
+            -
+                text: Vissy
+                url: /koirat/vissy
     -
         text: Pennut
         url: /pennut
