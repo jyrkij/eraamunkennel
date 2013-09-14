@@ -60,11 +60,24 @@ a {
 }
 
 section>img {
-    @include leader(1);
-    @include trailer(1);
+    display: block;
     width: 100%;
     height: auto;
+    margin: 1em 0;
+
+    @include at-breakpoint(30em) {
+        width: 20em;
+        margin: 1em auto;
+    }
+
+    @include at-breakpoint(45em) {
+        margin: 1em 0 1em 1em;
+        float: right;
+    }
+
+    @include at-breakpoint($break) {
     border: 1em solid $brown;
+}
 }
 
 

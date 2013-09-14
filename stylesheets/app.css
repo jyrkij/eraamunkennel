@@ -429,11 +429,27 @@ a {
 }
 
 section > img {
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
+  display: block;
   width: 100%;
   height: auto;
+  margin: 1em 0;
+}
+@media (min-width: 30em) {
+  section > img {
+    width: 20em;
+    margin: 1em auto;
+  }
+}
+@media (min-width: 45em) {
+  section > img {
+    margin: 1em 0 1em 1em;
+    float: right;
+  }
+}
+@media (min-width: 51em) {
+  section > img {
   border: 1em solid #2e200d;
+}
 }
 
 nav {
