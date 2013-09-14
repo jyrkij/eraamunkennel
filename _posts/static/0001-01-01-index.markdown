@@ -3,6 +3,7 @@ title: Etusivu
 layout: default
 disable_title: true
 theme_image: homepage-image-v2.jpg
+permalink: /
 ---
 
 Tässä kerromme etusivun arvoista tekstiä. Sen tekstin tulisi olla riittävän pitkä kertoakseen,
