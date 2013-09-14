@@ -76,15 +76,16 @@ section>img {
     }
 
     @include at-breakpoint($break) {
-    border: 1em solid $brown;
-}
+        border: 1em solid $brown;
+    }
 }
 
 
 nav {
     font-family: "museo-sans-condensed", sans-serif;
     margin-bottom: 20px;
-    text-align: right;
+    text-align: left;
+    clear: both;
 
     ul {
         list-style: none;
@@ -228,9 +229,13 @@ $footer-height: 1em * 2 + 1.3em * 1.1111111; // paragraph padding * 2 + line-hei
                 display: inline-block;
                 padding-left: 1em;
 
+                &:first-child {
+                    padding-left: 0;
+                }
+
                 &.has-children.current, &.has-children.path {
                     display: inline-block;
-                    vertical-align: top;
+                    //vertical-align: top;
                 }
                 
                 &.current, &.path {
@@ -247,6 +252,9 @@ $footer-height: 1em * 2 + 1.3em * 1.1111111; // paragraph padding * 2 + line-hei
 @include at-breakpoint($break) {
     .container>header {
         &>nav {
+            clear: none;
+            text-align: right;
+
             li {
                 &.has-children.current, &.has-children.path {
                     display: inline-block;

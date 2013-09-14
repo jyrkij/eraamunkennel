@@ -448,14 +448,15 @@ section > img {
 }
 @media (min-width: 51em) {
   section > img {
-  border: 1em solid #2e200d;
-}
+    border: 1em solid #2e200d;
+  }
 }
 
 nav {
   font-family: "museo-sans-condensed", sans-serif;
   margin-bottom: 20px;
-  text-align: right;
+  text-align: left;
+  clear: both;
 }
 nav ul {
   list-style: none;
@@ -503,8 +504,8 @@ nav .has-children.current > ul > li, nav .has-children.path > ul > li {
 }
 @media (min-width: 60em) {
   .theme-image {
-  background-position: center top;
-}
+    background-position: center top;
+  }
 }
 
 html, body {
@@ -582,9 +583,11 @@ html, body {
     display: inline-block;
     padding-left: 1em;
   }
+  .container > header > nav li:first-child {
+    padding-left: 0;
+  }
   .container > header > nav li.has-children.current, .container > header > nav li.has-children.path {
     display: inline-block;
-    vertical-align: top;
   }
   .container > header > nav li.current > a, .container > header > nav li.path > a {
     border-top: 3px solid #759751;
@@ -592,6 +595,10 @@ html, body {
   }
 }
 @media (min-width: 51em) {
+  .container > header > nav {
+    clear: none;
+    text-align: right;
+  }
   .container > header > nav li.has-children.current, .container > header > nav li.has-children.path {
     display: inline-block;
   }
