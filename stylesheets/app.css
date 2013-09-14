@@ -482,12 +482,13 @@ nav .has-children.current > ul > li, nav .has-children.path > ul > li {
   width: 100%;
   height: 225px;
   z-index: -1;
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: fixed;
+  transition: .8s;
+  background: url(/theme-images/header-image-v8.jpg) no-repeat left top fixed;
 }
-.theme-image.default {
-  background-image: url(/theme-images/header-image.jpg);
+@media (min-width: 60em) {
+  .theme-image {
+  background-position: center top;
+}
 }
 
 html, body {

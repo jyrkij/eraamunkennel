@@ -2,7 +2,6 @@
 title: Etusivu
 layout: default
 disable_title: true
-theme_image: homepage-image-v2.jpg
 permalink: /
 ---
 

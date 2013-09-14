@@ -126,12 +126,11 @@ $theme-image-height: 225px;
     width: 100%;
     height: $theme-image-height;
     z-index: -1;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: fixed;
+    transition: .8s;
+    background: url(/theme-images/header-image-v8.jpg) no-repeat left top fixed;
 
-    &.default {
-        background-image: url(/theme-images/header-image.jpg);
+    @include at-breakpoint(60em) {
+        background-position: center top;
     }
 }
 
