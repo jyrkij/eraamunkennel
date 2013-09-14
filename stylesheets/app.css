@@ -506,7 +506,7 @@ html, body {
 }
 
 .wrapper.footer, .page-wrap-for-footer:after {
-  height: 3.44444em;
+  min-height: 3.44444em;
 }
 
 .wrapper.header {
@@ -601,10 +601,57 @@ html, body {
 }
 .wrapper.footer {
   background: #6e5a41;
+  box-shadow: inset 0 20px 10px -20px #2e200d;
 }
 .wrapper.footer footer {
+  *zoom: 1;
   clear: both;
   padding-top: .1px;
+}
+.wrapper.footer footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.person {
+  width: 44.44444%;
+  float: left;
+  margin-right: 11.11111%;
+  display: inline;
+  margin-top: 0;
+}
+.person + .person {
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+.person img {
+  display: none;
+}
+@media (min-width: 41em) {
+  .person {
+    width: 35.89744%;
+    float: left;
+    margin-right: 2.5641%;
+    margin-left: 12.82051%;
+    font-weight: bold;
+    text-align: center;
+  }
+  .person + .person {
+    width: 35.89744%;
+    float: left;
+    margin-right: 2.5641%;
+    margin-left: 0%;
+  }
+  .person img {
+    display: block;
+    width: 100%;
+  }
+  .person br {
+    display: none;
+  }
 }
 
 form label {
