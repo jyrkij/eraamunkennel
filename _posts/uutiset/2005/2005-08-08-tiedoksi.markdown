@@ -1,0 +1,8 @@
+---
+title: Tiedoksi!
+layout: news
+disable_title: false
+categories: [ 'uutiset' ]
+---
+
+N-pentueen kaikki pennut saaneet uuden kodin!
