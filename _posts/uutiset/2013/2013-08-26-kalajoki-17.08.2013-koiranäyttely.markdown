@@ -1,6 +1,6 @@
 ---
 title: Kalajoki 17.08.2013 Koiranäyttely
-layout: default
+layout: news
 disable_title: false
 categories: [ 'uutiset' ]
 ---

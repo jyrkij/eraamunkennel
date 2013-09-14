@@ -1,6 +1,6 @@
 ---
 title: Näyttelytuloksia Joensuusta 11.08.2013
-layout: default
+layout: news
 disable_title: false
 categories: [ 'uutiset' ]
 ---

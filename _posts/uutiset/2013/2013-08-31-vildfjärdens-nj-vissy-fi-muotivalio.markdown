@@ -1,6 +1,6 @@
 ---
 title: Vildfjäderns NJ Vissy FI Muotovalio!
-layout: default
+layout: news
 disable_title: false
 categories: [ 'uutiset' ]
 ---

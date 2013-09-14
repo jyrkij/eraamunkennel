@@ -1,6 +1,6 @@
 ---
 title: KAER / Metsäkoe Hiukkajoella. Tuomari Heikki Nygren
-layout: default
+layout: news
 disable_title: false
 categories: [ 'uutiset' ]
 ---

@@ -1,6 +1,6 @@
 ---
 title: Vesi- ja jälkityökoe 06.07.2013
-layout: default
+layout: news
 disable_title: false
 categories: [ 'uutiset' ]
 ---
