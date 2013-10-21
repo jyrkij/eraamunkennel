@@ -135,15 +135,22 @@ nav {
     }
 }
 
+$theme-image-height-small: 40px;
+$theme-image-height-medium: 100px;
 $theme-image-height: 225px;
 .theme-image {
     width: 100%;
-    height: $theme-image-height;
+    height: $theme-image-height-small;
     z-index: -1;
     transition: .8s;
     background: url(../theme-images/header-image-v8.jpg) no-repeat left top fixed;
 
+    @include at-breakpoint(40em) {
+        height: $theme-image-height-medium;
+    }
+
     @include at-breakpoint(60em) {
+        height: $theme-image-height;
         background-position: center top;
     }
 }
