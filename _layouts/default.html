@@ -9,13 +9,13 @@
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <base href="{{ site.url }}">
+        <base href="{{ site.baseurl }}">
         <title>{{ page.title }} | {{ site.name }}</title>
         <meta name="keywords" content="{{ site.keywords }}">
         <meta name="description" content="{{ site.description }}">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <link href="/stylesheets/app.css" rel="stylesheet">
+        <link href="{{ site.baseurl }}/stylesheets/app.css" rel="stylesheet">
 
         <!--[if lt IE 9]>
         <script>
@@ -55,7 +55,7 @@
                 <div class="container">
                     <header>
                         <h1>
-                            <a href="{{ site.url }}">
+                            <a href="{{ site.baseurl }}">
                                 {{ site.name }}
                             </a>
                         </h1>
@@ -119,12 +119,12 @@
                     <p class="person">
                         Anna-Liisa<br>
                         040-831 0602<br>
-                        <img src="/media/anna-liisa.jpg" alt="Anna-Liisa">
+                        <img src="{{ site.baseurl }}/media/anna-liisa.jpg" alt="Anna-Liisa">
                     </p>
                     <p class="person">
                         Seppo<br>
                         040-548 8455<br>
-                        <img src="/media/seppo.jpg" alt="Seppo">
+                        <img src="{{ site.baseurl }}/media/seppo.jpg" alt="Seppo">
                     </p>
                 </footer>
             </div>
