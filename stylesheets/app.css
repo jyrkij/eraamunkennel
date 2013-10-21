@@ -1,4 +1,4 @@
-/* normalize.css v2.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -500,7 +500,7 @@ nav .has-children.current > ul > li, nav .has-children.path > ul > li {
   height: 225px;
   z-index: -1;
   transition: .8s;
-  background: url(/theme-images/header-image-v8.jpg) no-repeat left top fixed;
+  background: url(../theme-images/header-image-v8.jpg) no-repeat left top fixed;
 }
 @media (min-width: 60em) {
   .theme-image {

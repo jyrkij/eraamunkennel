@@ -141,7 +141,7 @@ $theme-image-height: 225px;
     height: $theme-image-height;
     z-index: -1;
     transition: .8s;
-    background: url(/theme-images/header-image-v8.jpg) no-repeat left top fixed;
+    background: url(../theme-images/header-image-v8.jpg) no-repeat left top fixed;
 
     @include at-breakpoint(60em) {
         background-position: center top;
