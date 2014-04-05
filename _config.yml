@@ -40,4 +40,3 @@ exclude: [ 'sass', 'config.rb', 'Procfile', 'Thumbs.db' ]
 prose:
     rooturl: _posts
     media: assets
-    
