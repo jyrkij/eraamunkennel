@@ -3,9 +3,10 @@ title: Historia
 layout: default
 disable_title: false
 permalink: /historia
+published: true
 ---
 
-<img src="{{ site.baseurl }}/media/Lintu seisonta.JPG">
+![Lintu seisonta.JPG](/assets/Lintu seisonta.JPG)
 
 Vuosi 1999 elokuu, päätös hankkia perheelle seisova lintukoira sai lopullisen sinetin,
 kun poikamme Mika päätti ruveta harrastamaan  metsästystä.
@@ -38,4 +39,3 @@ toivomme onnistuvamme tässä haastavassa työssä.
 Näin myös löytyi perheelle uusi yhteinen harrastus,
 jonka myötä Anna-Liisa on kulkenut metsällä, kaer kokeissa ja näyttelyissä  mukanani.
 Perheen muut jäsenet, ovat kiitettävästi myös mukana kenneltoiminnassamme.
-
