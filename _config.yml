@@ -43,17 +43,16 @@ prose:
     media: media
     siteurl: http://jyrkij.github.io/eraamunkennel/
     metadata:
-        _posts:
-            - name: disable_title
-              field:
-                element: checkbox
-                label: Älä näytä otsikkoa
-                value: false
         _posts/static:
             - name: layout
               field: 
                 element: hidden
                 value: default
+            - name: disable_title
+              field:
+                element: checkbox
+                label: Älä näytä otsikkoa
+                value: false
             - name: permalink
               field:
                 element: text
@@ -64,6 +63,11 @@ prose:
               field: 
                 element: hidden
                 value: news
+            - name: disable_title
+              field:
+                element: checkbox
+                label: Älä näytä otsikkoa
+                value: false
             - name: categories
               field:
                 element: multiselect
