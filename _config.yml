@@ -48,3 +48,7 @@ prose:
               field: 
                 element: hidden
                 value: default
+            - name: disable_title
+              field:
+                element: checkbox
+                value: false
