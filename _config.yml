@@ -40,4 +40,11 @@ exclude: [ 'sass', 'config.rb', 'Procfile', 'Thumbs.db' ]
 markdown: kramdown
 prose:
     rooturl: _posts
-    media: assets
+    media: media
+    siteurl: http://jyrkij.github.io/eraamunkennel/
+    metadata:
+        _posts/static:
+            - name: layout
+              field: 
+                element: hidden
+                value: default
