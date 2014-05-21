@@ -53,3 +53,8 @@ prose:
                 element: checkbox
                 label: Älä näytä otsikkoa
                 value: false
+            - name: permalink
+              field:
+                element: text
+                label: URL
+                value: ''
