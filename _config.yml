@@ -51,4 +51,5 @@ prose:
             - name: disable_title
               field:
                 element: checkbox
+                label: Älä näytä otsikkoa
                 value: false
