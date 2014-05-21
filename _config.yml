@@ -58,3 +58,26 @@ prose:
                 element: text
                 label: URL
                 value: ''
+        _posts/uutiset:
+            - name: layout
+              field: 
+                element: hidden
+                value: news
+            - name: disable_title
+              field:
+                element: checkbox
+                label: Älä näytä otsikkoa
+                value: false
+            - name: permalink
+              field:
+                element: text
+                label: URL
+                value: ''
+            - name: categories
+              field:
+                element: multiselect
+                label: Luokka
+                alterable: true
+                options:
+                  - name: Uutiset
+                    value: uutiset
