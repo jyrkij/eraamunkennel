@@ -6,7 +6,7 @@ permalink: /historia
 published: true
 ---
 
-![Lintu seisonta.JPG](/assets/Lintu seisonta.JPG)
+![Lintu seisonta.JPG](/media/Lintu seisonta.JPG)
 
 Vuosi 1999 elokuu, päätös hankkia perheelle seisova lintukoira sai lopullisen sinetin,
 kun poikamme Mika päätti ruveta harrastamaan  metsästystä.
