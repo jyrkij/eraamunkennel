@@ -1,6 +1,6 @@
 ---
 layout: news
-published: false
+published: true
 disable_title: false
 ---
 
