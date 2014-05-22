@@ -48,6 +48,11 @@ prose:
               field: 
                 element: hidden
                 value: default
+            - name: published
+              field:
+                element: checkbox
+                label: Julkaistu
+                value: false
             - name: disable_title
               field:
                 element: checkbox
@@ -63,6 +68,11 @@ prose:
               field: 
                 element: hidden
                 value: news
+            - name: published
+              field:
+                element: checkbox
+                label: Julkaistu
+                value: false
             - name: disable_title
               field:
                 element: checkbox
