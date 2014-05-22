@@ -729,3 +729,19 @@ form .actions {
   line-height: 1;
   display: inline-block;
 }
+
+.news {
+  list-style: none;
+  padding: 0;
+}
+
+.news-piece {
+  margin-bottom: 0.3125em;
+}
+.news-piece__date {
+  font-weight: bold;
+}
+.news-piece__link {
+  display: block;
+  text-decoration: none;
+}

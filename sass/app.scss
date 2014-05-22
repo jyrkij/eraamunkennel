@@ -372,3 +372,21 @@ form {
     line-height: 1;
     display: inline-block;
 }
+
+.news {
+    list-style: none;
+    padding: 0;
+}
+
+.news-piece {
+    margin-bottom: rhythm(.25);
+
+    &__date {
+        font-weight: bold;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+    }
+}
