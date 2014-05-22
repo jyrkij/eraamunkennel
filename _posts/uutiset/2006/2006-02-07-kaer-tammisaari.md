@@ -2,6 +2,8 @@
 layout: news
 published: true
 disable_title: false
+categories: 
+  - uutiset
 ---
 
 Kaer koe Tammisaari 05.02.2006 Tuomarina Risto Heikkinen
