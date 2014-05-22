@@ -348,18 +348,14 @@ table {
 }
 
 * {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-* html {
-  font-size: 112.5%;
-}
-
 html {
-  font-size: 18px;
-  line-height: 1.11111em;
+  font-size: 112.5%;
+  line-height: 1.25em;
 }
 
 body {
@@ -424,7 +420,17 @@ a {
 }
 @media (min-width: 51em) {
   .container {
+    *zoom: 1;
     max-width: 51em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container:after {
+    content: "";
+    display: table;
+    clear: both;
   }
 }
 
@@ -543,8 +549,8 @@ html, body {
 }
 
 .container > header {
-  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   margin-left: -1em;
   padding-left: 1em;
