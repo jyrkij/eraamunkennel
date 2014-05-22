@@ -6,6 +6,6 @@ categories:
   - uutiset
 ---
 
-Darlan N - pentueen toinen pentuetapaaminen  Kärkölässä 04 - 05.03.2006  
+Darlan N-pentueen toinen pentuetapaaminen  Kärkölässä 04 - 05.03.2006  
 Kutsu ohjelmineen lähipäivinä.  
 Tervetuloa!
