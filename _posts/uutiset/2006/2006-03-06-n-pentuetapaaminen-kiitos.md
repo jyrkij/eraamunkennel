@@ -2,6 +2,8 @@
 layout: news
 published: true
 disable_title: false
+categories: 
+  - uutiset
 ---
 
 N- pentue omistajineen!
