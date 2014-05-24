@@ -54,11 +54,11 @@
             <div class="wrapper header">
                 <div class="container">
                     <header>
-                        <h1>
+                        <p class="main-title">
                             <a href="{{ site.baseurl }}">
                                 {{ site.name }}
                             </a>
-                        </h1>
+                        </p>
                         <nav>
                             {% assign menu_items = site.menu %}
                             {% include navigation_list.html %}
@@ -73,9 +73,9 @@
                             <section>
                                 {% if page.disable_title != true%}
                                 <header>
-                                    <h2>
+                                    <h1>
                                         {{ page.title }}
-                                    </h2>
+                                    </h1>
                                 </header>
                                 {% endif %}
                                 {{ content }}

@@ -561,11 +561,12 @@ html, body {
   padding-right: 1em;
   overflow: hidden;
 }
-.container > header h1 {
-  float: left;
+.container > header .main-title {
   font-size: 1em;
+  float: left;
+  margin: 0;
 }
-.container > header h1 a {
+.container > header .main-title a {
   font-size: 2em;
   line-height: 1.3;
   display: block;
