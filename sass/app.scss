@@ -391,3 +391,20 @@ form {
         text-decoration: none;
     }
 }
+
+.page-navigation {
+  @include clearfix;
+
+  &__left,
+  &__right {
+    max-width: 40%;
+  }
+
+  &__left {
+    float: left;
+  }
+
+  &__right {
+    float: right;
+  }
+}

@@ -746,3 +746,17 @@ form .actions {
   display: block;
   text-decoration: none;
 }
+
+.page-navigation {
+  overflow: hidden;
+  *zoom: 1;
+}
+.page-navigation__left, .page-navigation__right {
+  max-width: 40%;
+}
+.page-navigation__left {
+  float: left;
+}
+.page-navigation__right {
+  float: right;
+}

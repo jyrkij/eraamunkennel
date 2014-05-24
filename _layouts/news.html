@@ -4,15 +4,11 @@ layout: default
 
 {{ content }}
 
-<div id="page-navigation">
-    <div class="left">
-        {% if page.previous.url %}
-            <a href="{{ site.baseurl }}{{page.previous.url}}" title="Edellinen uutinen: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
-        {% endif %}
-    </div>
-    <div class="right">
-        {% if page.next.url %}
-    	    <a href="{{ site.baseurl }}{{page.next.url}}" title="Seuraava uutinen: {{page.next.title}}">{{page.next.title}} &raquo; </a>
-        {% endif %}
-    </div>
+<div class="page-navigation">
+    {% if page.previous.url %}
+        <a class="page-navigation__left" href="{{ site.baseurl }}{{page.previous.url}}" title="Edellinen uutinen: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
+    {% endif %}
+    {% if page.next.url %}
+	    <a class="page-navigation__right" href="{{ site.baseurl }}{{page.next.url}}" title="Seuraava uutinen: {{page.next.title}}">{{page.next.title}} &raquo; </a>
+    {% endif %}
 </div>
