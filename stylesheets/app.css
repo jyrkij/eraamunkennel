@@ -580,6 +580,7 @@ html, body {
 
 .wrapper.main {
   padding-top: 1.25em;
+  padding-bottom: 2.5em;
   background: #fffefa;
   min-height: 225px;
 }
