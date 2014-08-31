@@ -347,7 +347,7 @@ table {
   border-spacing: 0;
 }
 
-* {
+*, *:before, *:after {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -403,34 +403,21 @@ a {
   color: #e46262;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
-  *zoom: 1;
-  max-width: 41em;
-  _width: 41em;
-  padding-left: 1em;
-  padding-right: 1em;
+  max-width: 49em;
   margin-left: auto;
   margin-right: auto;
+  padding: 1em;
 }
 .container:after {
-  content: "";
-  display: table;
+  content: " ";
+  display: block;
   clear: both;
-}
-@media (min-width: 51em) {
-  .container {
-    *zoom: 1;
-    max-width: 51em;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .container:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 }
 
 section > img {
@@ -451,7 +438,7 @@ section > img {
     float: right;
   }
 }
-@media (min-width: 51em) {
+@media (min-width: 49em) {
   section > img {
     border: 1em solid #2E200D;
   }
@@ -470,6 +457,7 @@ nav ul {
 }
 nav ul ul {
   display: none;
+  margin-left: 1em;
 }
 nav li {
   display: block;
@@ -542,7 +530,7 @@ html, body {
   padding-top: 1.25em;
   background: #fffefa;
 }
-@media (min-width: 51em) {
+@media (min-width: 49em) {
   .wrapper.header {
     border-bottom: 1px solid #6e5a41;
   }
@@ -551,10 +539,8 @@ html, body {
 .container > header {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  margin-left: -1em;
-  padding-left: 1em;
-  margin-right: -1em;
-  padding-right: 1em;
+  margin: -1em;
+  padding: 1em;
   overflow: hidden;
 }
 .container > header .main-title {
@@ -584,6 +570,12 @@ html, body {
 .main aside nav {
   display: none;
 }
+.main aside nav ul ul {
+  margin-left: 0;
+}
+.main aside nav ul ul ul {
+  margin-left: 1em;
+}
 .main aside nav a {
   color: #272735;
 }
@@ -591,7 +583,13 @@ html, body {
   margin: .5em 0;
 }
 
-@media (min-width: 21em) {
+@media (min-width: 49em) {
+  .container > header > nav {
+    clear: none;
+    text-align: right;
+  }
+}
+@media (min-width: 39em) {
   .container > header > nav li {
     display: inline-block;
     padding-left: 1em;
@@ -599,28 +597,39 @@ html, body {
   .container > header > nav li:first-child {
     padding-left: 0;
   }
-  .container > header > nav li.has-children.current, .container > header > nav li.has-children.path {
+  .container > header > nav .has-children.current,
+  .container > header > nav .has-children.path {
     display: inline-block;
   }
-  .container > header > nav li.current > a, .container > header > nav li.path > a {
+  .container > header > nav .has-children ul {
+    display: none;
+  }
+}
+@media (min-width: 49em) {
+  .container > header > nav .current > a,
+  .container > header > nav .path > a {
     border-top: 3px solid #759751;
     font-weight: 400;
   }
 }
-@media (min-width: 51em) {
-  .container > header > nav {
-    clear: none;
-    text-align: right;
-  }
-  .container > header > nav li.has-children.current, .container > header > nav li.has-children.path {
-    display: inline-block;
-  }
-  .container > header > nav li.has-children.current ul, .container > header > nav li.has-children.path ul {
-    display: none;
-  }
 
+@media (min-width: 39em) {
+  .main > section {
+    width: 74.35897%;
+    float: left;
+    margin-right: 2.5641%;
+  }
+}
+@media (min-width: 49em) {
+  .main > section {
+    width: 69.38776%;
+    float: left;
+    margin-right: 2.04082%;
+  }
+}
+@media (min-width: 39em) {
   .main > aside {
-    width: 28.57143%;
+    width: 23.07692%;
     float: right;
     margin-right: 0;
     background: #fffefa;
@@ -635,6 +644,14 @@ html, body {
     display: none;
   }
 }
+@media (min-width: 49em) {
+  .main > aside {
+    width: 28.57143%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
 .wrapper.footer {
   background: #6e5a41;
   box-shadow: inset 0 20px 10px -20px #2e200d;
@@ -650,46 +667,6 @@ html, body {
   clear: both;
 }
 
-.person {
-  width: 44.44444%;
-  float: left;
-  margin-right: 11.11111%;
-  display: inline;
-  margin-top: 0;
-}
-.person + .person {
-  float: right;
-  margin-right: 0;
-  *margin-left: -1em;
-  display: inline;
-}
-.person img {
-  display: none;
-}
-@media (min-width: 41em) {
-  .person {
-    width: 35.89744%;
-    float: left;
-    margin-right: 2.5641%;
-    margin-left: 12.82051%;
-    font-weight: bold;
-    text-align: center;
-  }
-  .person + .person {
-    width: 35.89744%;
-    float: left;
-    margin-right: 2.5641%;
-    margin-left: 0%;
-  }
-  .person img {
-    display: block;
-    width: 100%;
-  }
-  .person br {
-    display: none;
-  }
-}
-
 form label {
   *zoom: 1;
   display: block;
@@ -701,21 +678,14 @@ form label:after {
   clear: both;
 }
 form label b {
-  width: 21.05263%;
-  float: left;
-  margin-right: 5.26316%;
-  display: inline;
+  /*@include span-columns(1, 4);*/
   text-align: right;
 }
 form label input, form label textarea {
-  width: 73.68421%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -1em;
-  display: inline;
+  /*@include span-columns(3 omega, 4);*/
 }
 form .actions {
-  margin-left: 26.31579%;
+  /*@include push(1, 4);*/
 }
 
 .btn, input[type="submit"] {

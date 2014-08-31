@@ -1,10 +1,20 @@
-$total-columns: 8;
-$column-width: 4em;
-$gutter-width: 1em;
-$grid-padding: $gutter-width;
-$wide-phone-break: 4;
-$break: 10;
+$column: 4em;
+$gutter: 1em;
+$grid-padding: $gutter;
 $base-line-height: 20px;
+
+$columns-small: 4;
+$columns-medium: 8;
+$columns-large: 10;
+
+$susy: (
+  columns: $columns-small,
+  gutters: $gutter / $column,
+  column-width: $column
+);
+
+$breakpoint-medium: container($columns-medium static);
+$breakpoint-large: container($columns-large static);
 
 $red: #e46262;
 $white: #fffefa;
@@ -16,3 +26,15 @@ $brown: #2E200D;
 $yellow: #E08100;
 $light-green: #759751;
 $green: #266337;
+
+@mixin breakpoint-medium {
+  @include susy-breakpoint($breakpoint-medium, $columns-medium) {
+    @content;
+  }
+}
+
+@mixin breakpoint-large {
+  @include susy-breakpoint($breakpoint-large, $columns-large) {
+    @content;
+  }
+}

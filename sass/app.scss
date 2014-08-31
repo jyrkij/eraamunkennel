@@ -1,9 +1,8 @@
+@import "susy";
+@import "breakpoint";
+@import "compass";
 @import "settings";
 @import "normalize";
-@import "compass/typography/text/replacement";
-@import "compass/typography/vertical_rhythm";
-@import "compass/css3";
-@import "susyone";
 
 @include border-box-sizing;
 
@@ -55,8 +54,14 @@ a {
     color: $red;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
-    @include container($total-columns, $break);
+    @include container($columns-large);
+    padding: $grid-padding;
 }
 
 section>img {
@@ -65,17 +70,17 @@ section>img {
     height: auto;
     margin: 1em 0;
 
-    @include at-breakpoint(30em) {
+    @include breakpoint(30em) {
         width: 20em;
         margin: 1em auto;
     }
 
-    @include at-breakpoint(45em) {
+    @include breakpoint(45em) {
         margin: 1em 0 1em 1em;
         float: right;
     }
 
-    @include at-breakpoint($break) {
+    @include breakpoint($breakpoint-large) {
         border: 1em solid $brown;
     }
 }
@@ -94,6 +99,7 @@ nav {
 
         ul {
             display: none;
+            margin-left: 1em;
         }
     }
 
@@ -145,11 +151,11 @@ $theme-image-height: 225px;
     transition: .8s;
     background: url(../theme-images/header-image-v8.jpg) no-repeat left top fixed;
 
-    @include at-breakpoint(40em) {
+    @include breakpoint(40em) {
         height: $theme-image-height-medium;
     }
 
-    @include at-breakpoint(60em) {
+    @include breakpoint(60em) {
         height: $theme-image-height;
         background-position: center top;
     }
@@ -180,7 +186,7 @@ $footer-height: 1em * 2 + 1.3em * 1.1111111; // paragraph padding * 2 + line-hei
     @include padding-leader(1);
     background: $white;
 
-    @include at-breakpoint($break) {
+    @include breakpoint($breakpoint-large) {
         border-bottom: 1px solid $light-brown;
     }
 }
@@ -193,7 +199,7 @@ $footer-height: 1em * 2 + 1.3em * 1.1111111; // paragraph padding * 2 + line-hei
         font-size: 1em;
         float: left;
         margin: 0;
-        
+
         a {
             font-size: 2em;
             line-height: 1.3;
@@ -220,6 +226,14 @@ $footer-height: 1em * 2 + 1.3em * 1.1111111; // paragraph padding * 2 + line-hei
         nav {
             display: none;
 
+            ul ul {
+                margin-left: 0;
+            }
+
+            ul ul ul {
+                margin-left: 1em;
+            }
+
             a {
                 color: $dark;
             }
@@ -231,58 +245,58 @@ $footer-height: 1em * 2 + 1.3em * 1.1111111; // paragraph padding * 2 + line-hei
     }
 }
 
-@include at-breakpoint($wide-phone-break) {
-    .container>header {
-        &>nav {
-            li {
-                display: inline-block;
-                padding-left: 1em;
+.container>header>nav {
+    @include breakpoint($breakpoint-large) {
+        clear: none;
+        text-align: right;
+    }
 
-                &:first-child {
-                    padding-left: 0;
-                }
+    li {
+    }
 
-                &.has-children.current, &.has-children.path {
-                    display: inline-block;
-                    //vertical-align: top;
-                }
-                
-                &.current, &.path {
-                    &>a {
-                        border-top: 3px solid $light-green;
-                        font-weight: 400;
-                    }
-                }
-            }
+    @include breakpoint($breakpoint-medium) {
+        li {
+            display: inline-block;
+            padding-left: 1em;
+        }
+
+        li:first-child {
+            padding-left: 0;
+        }
+
+        .has-children.current,
+        .has-children.path {
+            display: inline-block;
+        }
+
+        .has-children ul {
+            display: none;
+        }
+    }
+
+    @include breakpoint($breakpoint-large) {
+        .current>a,
+        .path>a {
+            border-top: 3px solid $light-green;
+            font-weight: 400;
         }
     }
 }
 
-@include at-breakpoint($break) {
-    .container>header {
-        &>nav {
-            clear: none;
-            text-align: right;
+.main {
+    &>section {
+        @include breakpoint-medium {
+            @include span(6);
+        }
 
-            li {
-                &.has-children.current, &.has-children.path {
-                    display: inline-block;
-
-                    ul {
-                        display: none;
-                    }
-                }
-            }
+        @include breakpoint-large {
+            @include span(7);
         }
     }
-    
-    .main {
-        &>section {
-            //@include span-columns(7, $break);
-        }
 
-        &>aside {
-            @include span-columns(3 omega, $break);
+    &>aside {
+        @include breakpoint-medium {
+            @include span(last 2);
             background: $white;
             color: $dark;
             padding: 0 1em;
@@ -295,6 +309,10 @@ $footer-height: 1em * 2 + 1.3em * 1.1111111; // paragraph padding * 2 + line-hei
                     display: none;
                 }
             }
+        }
+
+        @include breakpoint-large {
+            @include span(last 3);
         }
     }
 }
@@ -310,40 +328,6 @@ $footer-height: 1em * 2 + 1.3em * 1.1111111; // paragraph padding * 2 + line-hei
     }
 }
 
-.person {
-    @include span-columns(1, 2);
-    margin-top: 0;
-
-    + .person {
-        @include omega;
-    }
-
-    img {
-        display: none;
-    }
-
-    @include at-breakpoint(8) {
-        @include span-columns(3);
-        @include push(1);
-        font-weight: bold;
-        text-align: center;
-
-        + .person {
-            @include span-columns(3);
-            @include push(0);
-        }
-
-        img {
-            display: block;
-            width: 100%;
-        }
-
-        br {
-            display: none;
-        }
-    }
-}
-
 form {
     label {
         @include pie-clearfix;
@@ -351,17 +335,17 @@ form {
         margin: 10px 0;
 
         b {
-            @include span-columns(1, 4);
+            /*@include span-columns(1, 4);*/
             text-align: right;
         }
 
         input, textarea {
-            @include span-columns(3 omega, 4);
+            /*@include span-columns(3 omega, 4);*/
         }
     }
 
     .actions {
-        @include push(1, 4);
+        /*@include push(1, 4);*/
     }
 }
 

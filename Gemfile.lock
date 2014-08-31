@@ -11,6 +11,9 @@ GEM
     autoprefixer-rails (3.0.1.20140826)
       execjs
     blankslate (2.1.2.4)
+    breakpoint (2.5.0)
+      sass (~> 3.3)
+      sassy-maps (< 1.0.0)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     chunky_png (1.3.1)
@@ -118,6 +121,8 @@ GEM
     redcarpet (3.1.2)
     safe_yaml (1.0.3)
     sass (3.4.2)
+    sassy-maps (0.4.0)
+      sass (~> 3.3)
     susy (2.1.3)
       sass (>= 3.3.0, < 3.5)
     thread_safe (0.3.4)
@@ -133,6 +138,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails (~> 3.0)
+  breakpoint (~> 2.5.0)
   compass (~> 1.0.1)
   csso-rails (~> 0.3.3)
   github-pages

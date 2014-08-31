@@ -1,5 +1,6 @@
 # Require any additional compass plugins here.
 require "susy"
+require "breakpoint"
 require 'autoprefixer-rails'
 require 'csso'
 
