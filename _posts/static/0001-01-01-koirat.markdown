@@ -6,18 +6,4 @@ permalink: /koirat
 published: true
 ---
 
-## Nipa
-
-![Nipa 13.10.06.JPG](/media/Nipa 13.10.06.JPG)
-
-## Nuka
-
-![Nuka 22.12.07 5.JPG](/media/Nuka 22.12.07 5.JPG)
-
-## Kara
-
-![Kara 17.8.10.JPG](/media/Kara 17.8.10.JPG)
-
-## Vissy
-
-![Vissy 21.5. 1.JPG](/media/Vissy 21.5. 1.JPG)
+![](/media/IMG_6800.jpg)
