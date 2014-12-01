@@ -106,6 +106,7 @@ GEM
     mini_portile (0.6.0)
     minitest (5.4.1)
     multi_json (1.10.1)
+    narray (0.6.0.9)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     parslet (1.5.0)
@@ -115,6 +116,8 @@ GEM
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
     rb-fsevent (0.9.4)
+    rb-gsl (1.16.0.3)
+      narray (>= 0.5.9)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     rdiscount (2.1.7)
@@ -142,4 +145,5 @@ DEPENDENCIES
   compass (~> 1.0.1)
   csso-rails (~> 0.3.3)
   github-pages
+  rb-gsl (~> 1.16)
   susy (~> 2.1)
