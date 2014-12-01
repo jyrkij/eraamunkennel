@@ -60,6 +60,9 @@ menu:
     -
         text: Historia
         url: /historia
+    -
+        text: Muistoissamme
+        url: /muistoissamme
 
 exclude: [ 'sass', 'config.rb', 'Procfile', 'Thumbs.db' ]
 markdown: kramdown
