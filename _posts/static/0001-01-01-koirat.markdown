@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Koirat
-disable_title: false
+disable_title: true
 permalink: /koirat
 published: true
 ---
