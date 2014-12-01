@@ -31,8 +31,32 @@ menu:
         url: /pennut
         children:
             -
-                text: Koordinaattimuunnin
-                url: /ohjelmat/koordinaattimuunnin
+                text: E-pentue
+                url: /pennut/e-pentue
+            -
+                text: N-pentue
+                url: /pennut/n-pentue
+            -
+                text: R-pentue
+                url: /pennut/r-pentue
+            -
+                text: K-pentue
+                url: /pennut/k-pentue
+            -
+                text: A-pentue
+                url: /pennut/a-pentue
+            -
+                text: P-pentue
+                url: /pennut/p-pentue
+            -
+                text: L-pentue
+                url: /pennut/l-pentue
+            -
+                text: J-pentue
+                url: /pennut/j-pentue
+            -
+                text: Pentue 2015
+                url: /pennut/pentue-2015
     -
         text: Historia
         url: /historia
