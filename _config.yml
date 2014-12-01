@@ -8,6 +8,9 @@ menu:
         text: Uutiset
         url: /uutiset
     -
+        text: Valioarvot
+        url: /valioarvot
+    -
         text: Koirat
         url: /koirat
         children:
