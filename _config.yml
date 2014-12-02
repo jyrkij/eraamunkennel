@@ -6,63 +6,63 @@ menu:
         url: /
     -
         text: Uutiset
-        url: /uutiset
+        url: /uutiset/
     -
         text: Valioarvot
-        url: /valioarvot
+        url: /valioarvot/
     -
         text: Koirat
-        url: /koirat
+        url: /koirat/
         children:
             -
                 text: Nipa
-                url: /koirat/nipa
+                url: /koirat/nipa/
             -
                 text: Nuka
-                url: /koirat/nuka
+                url: /koirat/nuka/
             -
                 text: Kara
-                url: /koirat/kara
+                url: /koirat/kara/
             -
                 text: Vissy
-                url: /koirat/vissy
+                url: /koirat/vissy/
     -
         text: Pennut
-        url: /pennut
+        url: /pennut/
         children:
             -
                 text: E-pentue
-                url: /pennut/e-pentue
+                url: /pennut/e-pentue/
             -
                 text: N-pentue
-                url: /pennut/n-pentue
+                url: /pennut/n-pentue/
             -
                 text: R-pentue
-                url: /pennut/r-pentue
+                url: /pennut/r-pentue/
             -
                 text: K-pentue
-                url: /pennut/k-pentue
+                url: /pennut/k-pentue/
             -
                 text: A-pentue
-                url: /pennut/a-pentue
+                url: /pennut/a-pentue/
             -
                 text: P-pentue
-                url: /pennut/p-pentue
+                url: /pennut/p-pentue/
             -
                 text: L-pentue
-                url: /pennut/l-pentue
+                url: /pennut/l-pentue/
             -
                 text: J-pentue
-                url: /pennut/j-pentue
+                url: /pennut/j-pentue/
             -
                 text: Pentue 2015
-                url: /pennut/pentue-2015
+                url: /pennut/pentue-2015/
     -
         text: Historia
-        url: /historia
+        url: /historia/
     -
         text: Muistoissamme
-        url: /muistoissamme
+        url: /muistoissamme/
 
 exclude: [ 'sass', 'config.rb', 'Procfile', 'Thumbs.db' ]
 markdown: kramdown
