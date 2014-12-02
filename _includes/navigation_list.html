@@ -1,12 +1,22 @@
-{% if menu_items %}
+{% capture html %}
     <ul>
-        {% for menu_item in menu_items %}
-            {% include current_logic.markdown %}
+        {% for menu_item in include.menu_items %}
+            {% assign current_page_url = page.url | replace: 'index.html', '' | append: '/' | replace: '//', '/' %}
+            {% assign current = false %}
+            {% if menu_item.url == current_page_url %}
+                {% assign current = 'current' %}
+            {% elsif current_page_url contains menu_item.url %}
+                {% assign current = 'path' %}
+            {% endif %}
+            {% if menu_item.url == '/' and current_page_url != '/' %}
+                {% assign current = false %}
+            {% endif %}
             <li class="{% if current %}{{ current }}{% endif %} {% if menu_item.children %}has-children{% endif %}">
                 <a href="{{ site.baseurl }}{{ menu_item.url }}">{{ menu_item.text }}</a>
-                {% assign menu_items = menu_item.children %}
-                {% include navigation_list.html %}
+                {% if menu_item.children %}
+                    {% include navigation_list.html menu_items=menu_item.children %}
+                {% endif %}
             </li>
         {% endfor %}
     </ul>
-{% endif %}
+{% endcapture %}{{ html | strip_newlines | replace: '  ', '' }}
