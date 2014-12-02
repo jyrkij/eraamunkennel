@@ -64,7 +64,13 @@ menu:
         text: Muistoissamme
         url: /muistoissamme/
 
-exclude: [ 'sass', 'config.rb', 'Procfile', 'Thumbs.db' ]
+exclude:
+    - sass
+    - config.rb
+    - Procfile
+    - Thumbs.db
+    - Gemfile
+    - Gemfile.lock
 markdown: kramdown
 prose:
     rooturl: _posts
